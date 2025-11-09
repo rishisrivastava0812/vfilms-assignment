@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varnan Films - Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F7EFE8;
+            color: #1C2635;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(242, 105, 56, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(28, 38, 53, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(247, 239, 232, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo .v {
+            color: #F26938;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #5D6B7A;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1C2635;
+        }
+
+        .cta-btn {
+            background: #F26938;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.375rem;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #C44D22;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .mandala-logo {
+            text-align: center;
+            position: relative;
+        }
+
+        .mandala-logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 10;
+        }
+
+        .mandala-logo .v {
+            color: #F26938;
+        }
+
+        .mandala-logo .films {
+            font-size: 3.5rem;
+        }
+
+        .hero-text h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            font-style: italic;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        .hero-pills {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #F26938;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-pills .dot {
+            font-size: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            color: #1C2635;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        /* Storyboard Section */
+        .storyboard {
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .brush-underline {
+            width: 12rem;
+            height: 8px;
+            margin: 0 auto;
+            background: #1C2635;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 1.25rem;
+            padding-bottom: 3.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .polaroid:nth-child(1) {
+            transform: rotate(-3deg);
+        }
+
+        .polaroid:nth-child(2) {
+            transform: rotate(2deg);
+        }
+
+        .polaroid:nth-child(3) {
+            transform: rotate(-2deg);
+        }
+
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 10;
+        }
+
+        .polaroid-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.125rem;
+        }
+
+        .polaroid-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.125rem;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .tape {
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5rem;
+            height: 2rem;
+            background: rgba(254, 243, 199, 0.8);
+            border: 1px solid rgba(253, 230, 138, 0.3);
+        }
+
+        /* Team Showcase */
+        .team-showcase {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .sticky-note {
+            background: #FFFBEB;
+            padding: 2rem;
+            transform: rotate(-2deg);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+
+        .sticky-note p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .silhouettes {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .silhouette {
+            width: 4rem;
+            height: 7rem;
+            background: #1C2635;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .silhouette:nth-child(3) {
+            height: 8rem;
+        }
+
+        .portfolio-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .portfolio-cta p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Metrics */
+        .metrics {
+            padding: 4rem 0;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .sticky-notes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .sticky-note-metric {
+            padding: 1.5rem;
+            min-width: 140px;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .sticky-note-metric:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .sticky-note-metric:nth-child(1) {
+            background: #FEF3C7;
+            transform: rotate(-2deg);
+        }
+
+        .sticky-note-metric:nth-child(2) {
+            background: #FECACA;
+            transform: rotate(2deg);
+        }
+
+        .sticky-note-metric:nth-child(3) {
+            background: #DBEAFE;
+            transform: rotate(-1deg);
+        }
+
+        .metric-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1C2635;
+        }
+
+        .metric-label {
+            color: #5D6B7A;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .quote-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background: #1C2635;
+            color: #F7EFE8;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo .v {
+            color: #F26938;
+        }
+
+        footer a {
+            color: rgba(247, 239, 232, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #F26938;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(247, 239, 232, 0.2);
+            color: rgba(247, 239, 232, 0.6);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-grid,
+            .team-grid,
+            .metrics-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+
+            .mandala-logo h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <span class="v">V</span> Films
+            </div>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#stories">Their Stories</a>
+                <a href="#about">Our Story</a>
+                <a href="#varnan">Varnan</a>
+                <button class="cta-btn">Let's Talk</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="mandala-logo">
+                    <h1>
+                        <span class="v">V</span><span class="films">Films</span>
+                    </h1>
+                </div>
+                <div class="hero-text">
+                    <h2>Varnan is where stories find their voice and form</h2>
+                    <div class="hero-pills">
+                        <span>Films</span>
+                        <span class="dot">.</span>
+                        <span>Brands</span>
+                        <span class="dot">.</span>
+                        <span>Art</span>
+                    </div>
+                    <p>
+                        Since 2009, V've been telling stories – stories of people, their journeys, and the places that shape them. 
+                        Some begin in polished boardrooms, others in humble village squares. But every story starts the same way – 
+                        by listening with intention. V believes it takes trust, patience, and an eye for the unseen to capture what 
+                        truly matters. V doesn't just tell stories – V honors them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storyboard Section -->
+    <section class="storyboard">
+        <div class="container">
+            <div class="section-title">
+                <h2>The storyboard reveals the breadth of our craft.</h2>
+                <div class="brush-underline"></div>
+            </div>
+            <div class="cards-grid">
+                <div class="polaroid">
+                    <div class="tape"></div>
+                    <div class="polaroid-image">Film Production</div>
+                    <div class="polaroid-title">Film Production</div>
+                </div>
+                <div class="polaroid">
+                    <div class="tape"></div>
+                    <div class="polaroid-image">Branding</div>
+                    <div class="polaroid-title">Branding</div>
+                </div>
+                <div class="polaroid">
+                    <div class="tape"></div>
+                    <div class="polaroid-image">Art Curation</div>
+                    <div class="polaroid-title">Art Curation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Showcase -->
+    <section class="team-showcase">
+        <div class="container">
+            <div class="team-grid">
+                <div>
+                    <div class="sticky-note">
+                        <p>
+                            Some craft films. Some build brands. Some curate art. We bring it all together – a collective 
+                            of storytellers driven by one belief: every project deserves to be more than just a message; 
+                            it should become a masterpiece.
+                        </p>
+                        <p>
+                            From first spark to final frame, from raw ideas to timeless visuals – we share stories that 
+                            stay with you.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="silhouettes">
+                        <div class="silhouette"></div>
+                        <div class="silhouette"></div>
+                        <div class="silhouette"></div>
+                        <div class="silhouette"></div>
+                        <div class="silhouette"></div>
+                    </div>
+                    <div class="portfolio-cta">
+                        <p>Take a closer look at the stories V bring to life.</p>
+                        <button class="cta-btn">View Portfolio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="metrics">
+        <div class="container">
+            <div class="metrics-grid">
+                <div>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 2rem;">
+                        A montage of familiar faces and names.
+                    </h3>
+                    <div class="sticky-notes">
+                        <div class="sticky-note-metric">
+                            <div class="metric-value">85+</div>
+                            <div class="metric-label">Projects</div>
+                        </div>
+                        <div class="sticky-note-metric">
+                            <div class="metric-value">50+</div>
+                            <div class="metric-label">Happy Clients</div>
+                        </div>
+                        <div class="sticky-note-metric">
+                            <div class="metric-value">10+</div>
+                            <div class="metric-label">Experts Team</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="quote-text">
+                        Every project is more than just a brief - it's a new chapter waiting to be written. 
+                        Together, we've crafted tales that inspire, connect, and endure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <span class="v">V</span> Films
+                    </div>
+                    <p style="font-size: 0.875rem; opacity: 0.7;">
+                        Where stories find their voice and form
+                    </p>
+                </div>
+                <div>
+                    <p style="font-weight: 600; margin-bottom: 1rem;">Get in Touch</p>
+                    <a href="mailto:vernita@varnanfilms.co.in">vernita@varnanfilms.co.in</a>
+                    <a href="tel:+919873684567">+91 98736 84567</a>
+                </div>
+                <div style="text-align: right;">
+                    <p style="font-weight: 600; margin-bottom: 1rem;">Follow Us</p>
+                    <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                        <span style="width: 40px; height: 40px; background: rgba(247,239,232,0.1); border-radius: 50%; display: inline-block;"></span>
+                        <span style="width: 40px; height: 40px; background: rgba(247,239,232,0.1); border-radius: 50%; display: inline-block;"></span>
+                        <span style="width: 40px; height: 40px; background: rgba(247,239,232,0.1); border-radius: 50%; display: inline-block;"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Varnan Films. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

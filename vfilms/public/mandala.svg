@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 565" fill="none">
+  <g stroke="#F26938" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Outer square frame -->
+    <rect x="40" y="40" width="485" height="485" rx="5" />
+    
+    <!-- Concentric circles -->
+    <circle cx="282.5" cy="282.5" r="240" stroke-width="1.5"/>
+    <circle cx="282.5" cy="282.5" r="220" stroke-width="1"/>
+    <circle cx="282.5" cy="282.5" r="200" stroke-width="1.5"/>
+    <circle cx="282.5" cy="282.5" r="180" stroke-width="1"/>
+    <circle cx="282.5" cy="282.5" r="160" stroke-width="1.5"/>
+    <circle cx="282.5" cy="282.5" r="140" stroke-width="1"/>
+    <circle cx="282.5" cy="282.5" r="120" stroke-width="1.5"/>
+    <circle cx="282.5" cy="282.5" r="100" stroke-width="1"/>
+    <circle cx="282.5" cy="282.5" r="80" stroke-width="1.5"/>
+    <circle cx="282.5" cy="282.5" r="60" stroke-width="1"/>
+    <circle cx="282.5" cy="282.5" r="40" stroke-width="1.5"/>
+    <circle cx="282.5" cy="282.5" r="25" stroke-width="1"/>
+    
+    <!-- 8 main petals (outer layer) -->
+    <g transform="translate(282.5, 282.5)">
+      <!-- Top petal -->
+      <path d="M 0,-200 Q -25,-175 -30,-140 Q -20,-160 0,-170 Q 20,-160 30,-140 Q 25,-175 0,-200 Z" />
+      <path d="M 0,-170 L 0,-120" />
+      <path d="M -15,-150 Q 0,-135 15,-150" />
+      
+      <!-- Top-right -->
+      <g transform="rotate(45)">
+        <path d="M 0,-200 Q -25,-175 -30,-140 Q -20,-160 0,-170 Q 20,-160 30,-140 Q 25,-175 0,-200 Z" />
+        <path d="M 0,-170 L 0,-120" />
+      </g>
+      
+      <!-- Right -->
+      <g transform="rotate(90)">
+        <path d="M 0,-200 Q -25,-175 -30,-140 Q -20,-160 0,-170 Q 20,-160 30,-140 Q 25,-175 0,-200 Z" />
+        <path d="M 0,-170 L 0,-120" />
+      </g>
+      
+      <!-- Bottom-right -->
+      <g transform="rotate(135)">
+        <path d="M 0,-200 Q -25,-175 -30,-140 Q -20,-160 0,-170 Q 20,-160 30,-140 Q 25,-175 0,-200 Z" />
+        <path d="M 0,-170 L 0,-120" />
+      </g>
+      
+      <!-- Bottom -->
+      <g transform="rotate(180)">
+        <path d="M 0,-200 Q -25,-175 -30,-140 Q -20,-160 0,-170 Q 20,-160 30,-140 Q 25,-175 0,-200 Z" />
+        <path d="M 0,-170 L 0,-120" />
+      </g>
+      
+      <!-- Bottom-left -->
+      <g transform="rotate(225)">
+        <path d="M 0,-200 Q -25,-175 -30,-140 Q -20,-160 0,-170 Q 20,-160 30,-140 Q 25,-175 0,-200 Z" />
+        <path d="M 0,-170 L 0,-120" />
+      </g>
+      
+      <!-- Left -->
+      <g transform="rotate(270)">
+        <path d="M 0,-200 Q -25,-175 -30,-140 Q -20,-160 0,-170 Q 20,-160 30,-140 Q 25,-175 0,-200 Z" />
+        <path d="M 0,-170 L 0,-120" />
+      </g>
+      
+      <!-- Top-left -->
+      <g transform="rotate(315)">
+        <path d="M 0,-200 Q -25,-175 -30,-140 Q -20,-160 0,-170 Q 20,-160 30,-140 Q 25,-175 0,-200 Z" />
+        <path d="M 0,-170 L 0,-120" />
+      </g>
+    </g>
+    
+    <!-- Inner layer petals (16 petals, offset) -->
+    <g transform="translate(282.5, 282.5)">
+      <g transform="rotate(22.5)">
+        <path d="M 0,-120 Q -12,-105 -15,-85 L 0,-95 L 15,-85 Q 12,-105 0,-120 Z" />
+        <g transform="rotate(45)"><path d="M 0,-120 Q -12,-105 -15,-85 L 0,-95 L 15,-85 Q 12,-105 0,-120 Z" /></g>
+        <g transform="rotate(90)"><path d="M 0,-120 Q -12,-105 -15,-85 L 0,-95 L 15,-85 Q 12,-105 0,-120 Z" /></g>
+        <g transform="rotate(135)"><path d="M 0,-120 Q -12,-105 -15,-85 L 0,-95 L 15,-85 Q 12,-105 0,-120 Z" /></g>
+        <g transform="rotate(180)"><path d="M 0,-120 Q -12,-105 -15,-85 L 0,-95 L 15,-85 Q 12,-105 0,-120 Z" /></g>
+        <g transform="rotate(225)"><path d="M 0,-120 Q -12,-105 -15,-85 L 0,-95 L 15,-85 Q 12,-105 0,-120 Z" /></g>
+        <g transform="rotate(270)"><path d="M 0,-120 Q -12,-105 -15,-85 L 0,-95 L 15,-85 Q 12,-105 0,-120 Z" /></g>
+        <g transform="rotate(315)"><path d="M 0,-120 Q -12,-105 -15,-85 L 0,-95 L 15,-85 Q 12,-105 0,-120 Z" /></g>
+      </g>
+    </g>
+    
+    <!-- Innermost petals (8 petals) -->
+    <g transform="translate(282.5, 282.5)">
+      <path d="M 0,-60 Q -8,-50 -10,-35 L 0,-42 L 10,-35 Q 8,-50 0,-60 Z" />
+      <g transform="rotate(45)"><path d="M 0,-60 Q -8,-50 -10,-35 L 0,-42 L 10,-35 Q 8,-50 0,-60 Z" /></g>
+      <g transform="rotate(90)"><path d="M 0,-60 Q -8,-50 -10,-35 L 0,-42 L 10,-35 Q 8,-50 0,-60 Z" /></g>
+      <g transform="rotate(135)"><path d="M 0,-60 Q -8,-50 -10,-35 L 0,-42 L 10,-35 Q 8,-50 0,-60 Z" /></g>
+      <g transform="rotate(180)"><path d="M 0,-60 Q -8,-50 -10,-35 L 0,-42 L 10,-35 Q 8,-50 0,-60 Z" /></g>
+      <g transform="rotate(225)"><path d="M 0,-60 Q -8,-50 -10,-35 L 0,-42 L 10,-35 Q 8,-50 0,-60 Z" /></g>
+      <g transform="rotate(270)"><path d="M 0,-60 Q -8,-50 -10,-35 L 0,-42 L 10,-35 Q 8,-50 0,-60 Z" /></g>
+      <g transform="rotate(315)"><path d="M 0,-60 Q -8,-50 -10,-35 L 0,-42 L 10,-35 Q 8,-50 0,-60 Z" /></g>
+    </g>
+    
+    <!-- Center circle and details -->
+    <g transform="translate(282.5, 282.5)">
+      <circle cx="0" cy="0" r="20" stroke-width="2"/>
+      <circle cx="0" cy="0" r="10" fill="#F26938" opacity="0.2"/>
+      
+      <!-- Center star pattern -->
+      <path d="M 0,-15 L 3,-5 L 13,-3 L 5,3 L 7,13 L 0,8 L -7,13 L -5,3 L -13,-3 L -3,-5 Z" stroke-width="1"/>
+    </g>
+    
+    <!-- Decorative corner elements -->
+    <path d="M 40,40 L 60,60 M 40,525 L 60,505 M 525,40 L 505,60 M 525,525 L 505,505" stroke-width="2"/>
+  </g>
+</svg>
